@@ -1,0 +1,235 @@
+.reader-section {
+
+  @media screen and (min-width: 1300px) {
+    &__container {
+      flex-direction: row !important;
+    }
+  }
+
+  &__container {
+    padding: 40px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include respond-to('tablet') {
+      padding: 130px 15px 150px;
+    }
+  }
+
+  // .reader-section__content
+  &__content {
+    max-width: 448px;
+    width: 100%;
+    margin-right: 0;
+
+    @include respond-to('tablet') {
+      margin-right: 63px;
+    }
+  }
+
+  // .reader-section__text
+  &__text {
+    width: 435px;
+    max-width: 100%;
+    font-family: $inter;
+    font-size: 17px;
+    line-height: 25px;
+    color: $grey;
+    margin-bottom: 22px;
+    text-align: center;
+
+    @include respond-to('tablet') {
+      font-size: 19px;
+      line-height: 34px;
+      text-align: left;
+    }
+  }
+
+  // .reader-section__readers
+  &__readers {
+    display: grid;
+    grid-template-columns: 250px;
+    grid-template-rows: auto;
+    grid-row-gap: 20px;
+    grid-template-areas:
+    "first"
+    "second"
+    "third";
+
+    @include respond-to('mobile-s') {
+      grid-template-columns: 381px;
+    }
+
+    @include respond-to('tablet') {
+      grid-template-columns: 381px 381px;
+      grid-column-gap: 20px;
+      grid-template-areas:
+    "first ."
+    "first second"
+    "third second"
+    "third .";
+    }
+  }
+}
+
+.title {
+  // .title__readers
+  &__readers {
+    margin-bottom: 43px;
+    text-align: center;
+
+    @include respond-to('tablet') {
+      margin-bottom: 59px;
+      text-align: left;
+    }
+
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include respond-to('tablet') {
+        left: 0;
+        transform: translateX(0);
+      }
+    }
+  }
+}
+
+.rating {
+  // .rating__cap
+  &__cap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @include respond-to('tablet') {
+      flex-direction: row;
+    }
+  }
+  // .rating__num .rating__description
+  &__num,  &__description{
+    font-size: 22px;
+    line-height: 26px;
+    color: $blue;
+  }
+
+  // .rating__description
+  &__description {
+    display: block;
+    text-align: center;
+
+    @include respond-to('tablet') {
+      text-align: left;
+    }
+  }
+
+  // .rating__num
+  &__num {
+    padding-left: 5px;
+  }
+}
+
+.circle-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  // .circle-list__item
+  &__item {
+    width: 13px;
+    height: 13px;
+    margin-right: 3px;
+  }
+  // .circle-list__svg
+  &__svg {
+
+  }
+}
+
+.reader {
+
+  &:first-of-type {
+    grid-area: first;
+  }
+
+  &:nth-of-type(2) {
+    grid-area: second;
+  }
+
+  &:last-of-type {
+    grid-area: third;
+  }
+
+  // .reader__content
+  &__content {
+    padding: 30px;
+    background-color: $blue;
+
+    @include respond-to('tablet') {
+      padding: 30px 56px 24px 35px;
+    }
+  }
+
+  // .reader__info
+  &__info {
+    @include respond-to('tablet') {
+      padding-left: 20px;
+    }
+  }
+
+  // .reader__caption
+  &__caption {
+    display: block;
+    padding-top: 20px;
+    font-size: 22px;
+    line-height: 33px;
+    color: $white;
+    margin-bottom: 13px;
+    text-align: center;
+
+    @include respond-to('tablet') {
+      text-align: left;
+    }
+  }
+
+  // .reader__name
+  &__name {
+    display: block;
+    font-size: 24px;
+    line-height: 29px;
+    color: $white;
+    margin-bottom: 15px;
+    text-align: center;
+    
+    @include respond-to('tablet') {
+      text-align: left;
+    }
+  }
+
+  // .reader__text
+  &__text {
+    font-family: $inter;
+    font-size: 18px;
+    line-height: 29px;
+    color: $light-blue;
+    text-align: center;
+
+    @include respond-to('tablet') {
+      text-align: left;
+    }
+  }
+}
+
+.reader-holder {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  @include respond-to ('tablet') {
+    justify-content: flex-start;
+  }
+}

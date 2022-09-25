@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="src/style/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="src/js/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body>
+
+<header class="header header--position">
+    <div class="container header__container">
+        <div class="logo logo--flex logo--h">
+            <img class="logo__img" src="src/img/logo.svg" alt="logo">
+            <div class="icons-menu icons-menu--fix">
+                <div class="icon-holder icon-holder--size-h icon-holder--color-h">
+                    <svg class="icon-holder__icon" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.75391 8.625L8.13672 6.10938H5.70312V4.46875C5.70312 3.75781 6.03125 3.10156 7.125 3.10156H8.24609V0.941406C8.24609 0.941406 7.23438 0.75 6.27734 0.75C4.28125 0.75 2.96875 1.98047 2.96875 4.16797V6.10938H0.726562V8.625H2.96875V14.75H5.70312V8.625H7.75391Z" fill="#141414"/>
+                    </svg>
+
+                </div>
+                <div class="icon-holder icon-holder--size-h icon-holder--color-h">
+                    <svg class="icon-holder__icon" width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5508 2.90625C13.0977 2.49609 13.5898 2.00391 13.9727 1.42969C13.4805 1.64844 12.9062 1.8125 12.332 1.86719C12.9336 1.51172 13.3711 0.964844 13.5898 0.28125C13.043 0.609375 12.4141 0.855469 11.7852 0.992188C11.2383 0.417969 10.5 0.0898438 9.67969 0.0898438C8.09375 0.0898438 6.80859 1.375 6.80859 2.96094C6.80859 3.17969 6.83594 3.39844 6.89062 3.61719C4.51172 3.48047 2.37891 2.33203 0.957031 0.609375C0.710938 1.01953 0.574219 1.51172 0.574219 2.05859C0.574219 3.04297 1.06641 3.91797 1.85938 4.4375C1.39453 4.41016 0.929688 4.30078 0.546875 4.08203V4.10938C0.546875 5.50391 1.53125 6.65234 2.84375 6.92578C2.625 6.98047 2.35156 7.03516 2.10547 7.03516C1.91406 7.03516 1.75 7.00781 1.55859 6.98047C1.91406 8.12891 2.98047 8.94922 4.23828 8.97656C3.25391 9.74219 2.02344 10.207 0.683594 10.207C0.4375 10.207 0.21875 10.1797 0 10.1523C1.25781 10.9727 2.76172 11.4375 4.40234 11.4375C9.67969 11.4375 12.5508 7.08984 12.5508 3.28906C12.5508 3.15234 12.5508 3.04297 12.5508 2.90625Z" fill="#141414"/>
+                    </svg>
+
+                </div>
+                <div class="icon-holder icon-holder--size-h icon-holder--color-h">
+                    <svg class="icon-holder__icon" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.10938 13V4.82422H0.566406V13H3.10938ZM1.82422 3.73047C2.64453 3.73047 3.30078 3.04688 3.30078 2.22656C3.30078 1.43359 2.64453 0.777344 1.82422 0.777344C1.03125 0.777344 0.375 1.43359 0.375 2.22656C0.375 3.04688 1.03125 3.73047 1.82422 3.73047ZM12.5977 13H12.625V8.51562C12.625 6.32812 12.1328 4.63281 9.5625 4.63281C8.33203 4.63281 7.51172 5.31641 7.15625 5.94531H7.12891V4.82422H4.69531V13H7.23828V8.95312C7.23828 7.88672 7.42969 6.875 8.74219 6.875C10.0547 6.875 10.082 8.07812 10.082 9.03516V13H12.5977Z" fill="#141414"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li class="nav-menu__item"><a href="#" class="nav-menu__link nav-menu__link--active">Home</a></li>
+                    <li class="nav-menu__item"><a href="#" class="nav-menu__link">About</a></li>
+                    <li class="nav-menu__item"><a href="#" class="nav-menu__link">Pages</a></li>
+                    <li class="nav-menu__item"><a href="#" class="nav-menu__link">Contact us</a></li>
+                </ul>
+                <div class="btn-wrapper btn-wrapper--fix">
+                    <div class="cart"><a class="cart__link" href="#"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1_27)">
+                            <path d="M2.60593 2H0V0H4.39407L4.84288 4H16V9.93845L3.76941 12.3694L2.60593 2ZM15.5 17C14.6716 17 14 16.3284 14 15.5C14 14.6716 14.6716 14 15.5 14C16.3284 14 17 14.6716 17 15.5C17 16.3284 16.3284 17 15.5 17ZM5.5 17C4.67157 17 4 16.3284 4 15.5C4 14.6716 4.67157 14 5.5 14C6.32843 14 7 14.6716 7 15.5C7 16.3284 6.32843 17 5.5 17Z" fill="black"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1_27">
+                                <rect width="17" height="17" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg></a></div>
+                    <div class="btn"><a class="btn__link btn__link--fix" href="#">Order Today</a></div>
+                </div>
+            </nav>
+        <button class="nav-opener js-nav-opener">
+            <span></span>
+        </button>
+    </div>
+</header>
+
+<main class="main">
+    <section class="hero hero--color">
+        <div class="container hero__container">
+            <div class="hero__inner hero__inner--size">
+                <div class="welcome">
+                        <span class="welcome__span">Welcome to Pages!!!</span>
+                </div>
+
+                <div class="hero__title">
+                    <h1>Your Books From The Best Writer.</h1>
+                </div>
+
+                <div class="hero__text">
+                    <p>We believe that reading books are essential to a healthy culture.</p>
+                    <p>They’re where authors can connect with readers.</p>
+                </div>
+
+                <div class="btn-wrapper btn-wrapper--hero">
+                    <div class="btn"><a class="btn__link" href="#">Order Today</a></div>
+                    <div class="btn-wrapper__demo-btn">
+                        <a href="#">Read Free Demo</a>
+                    </div>
+                </div>
+
+                <ul class="info-list-wrapper">
+                    <li class="info-list-wrapper__item">Pages:<span>250pages</span></li>
+                    <li class="info-list-wrapper__item">Length:<span>10 Hours</span></li>
+                    <li class="info-list-wrapper__item">Rating:<span>4.5/5 (305 ratings)</span></li>
+                </ul>
+
+            </div>
+            <div class="hero__img">
+                <img src="src/img/hero-img.png" alt="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="authors-book-section">
+        <div class="container authors-book-section__container">
+            <div class="title">
+                <h2 class="title__authors">The Author’s Book</h2>
+            </div>
+            <div class="book-wrapper">
+                <div class="book-wrapper__item">
+                    <div class="book-wrapper__img">
+                        <img src="src/img/atomic.png" alt="atomic one's">
+                    </div>
+                    <div class="book-content book-content--size-q">
+                        <div class="book-content__caption">Atomic One’s</div>
+                        <div class="book-content__price">$ 13.84 USD</div>
+                        <div class="book-content__text">As the book contains theoretical content as well as solved questions.</div>
+                        <div class="book-content__mark">Printed Book</div>
+                         <div class="btn-wrapper btn-wrapper--fix-flex"><div class="btn"><a class="btn__link btn__link--color-white" href="#">Order Now</a></div></div>
+                    </div>
+                </div>
+                <div class="book-wrapper__item">
+                    <div class="book-wrapper__img">
+                        <img src="src/img/hero-img.png" alt="the dark light">
+                    </div>
+                    <div class="book-content book-content--size-q">
+                        <div class="book-content__caption">The Dark Light</div>
+                        <div class="book-content__price">$ 86.11 USD</div>
+                        <div class="book-content__text">As the book contains theoretical content as well as solved questions.</div>
+                        <div class="book-content__mark">Printed Book</div>
+                         <div class="btn-wrapper btn-wrapper--fix-flex"><div class="btn"><a class="btn__link btn__link--color-white" href="#">Order Now</a></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section about-section--color">
+        <div class="container about-section__container">
+            <div class="about-section__img">
+                <img src="src/img/about.png" alt="about img">
+            </div>
+
+            <div class="about-section__content">
+                <div class="title">
+                    <h2 class="title__about">About the Author</h2>
+                </div>
+                <div class="about-section__text">
+                    <p>
+                        We believe that bookstores are essential to a healthy culture. They’re where authors can connect with readers, where we discover new writers, where children get hooked on the thrill of reading that can last a lifetime.
+                    </p>
+                </div>
+                <div class="statistic">
+                    <div class="statistic__item">02<span>Books Published</span></div>
+                    <div class="statistic__item">4.5<span>User Reviews</span></div>
+                    <div class="statistic__item">04<span>Best Seller Awards</span></div>
+                </div>
+                <div class="about-section__contacts">
+                    <div class="img-holder">
+                        <img src="src/img/qr-code.png" alt="qr-code">
+                    </div>
+                    <div class="contacts-text">
+                        <span class="contacts-text__name">John Abraham , Ph.d</span>
+                        <span class="contacts-text__mail">Mail: johnabraham@gmail.com</span>
+                        <span class="contacts-text__phone">Phone: (+2) 123 545 9000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trusted-section">
+        <div class="container trusted-section__container">
+            <div class="title">
+                <h2 class="title__trusted">Trusted By The Best</h2>
+            </div>
+            <div class="sponsored-wrapper">
+                <div class="sponsored-wrapper__item">
+                    <div class="img-holder">
+                        <img class="sponsored-wrapper__img" src="src/img/amazen.svg" alt="amazen">
+                    </div>
+                    <div class="sponsor-item-context">
+                        <span class="sponsor-item-context__title">Amazen Corp.</span>
+                        <p class="sponsor-item-context__text">They has been helping readers, music lovers, and videophiles find quality material.</p>
+                    </div>
+                </div>
+                <div class="sponsored-wrapper__item">
+                    <div class="img-holder">
+                        <img class="sponsored-wrapper__img" src="src/img/megan.svg" alt="megan">
+                    </div>
+                    <div class="sponsor-item-context">
+                        <span class="sponsor-item-context__title">Megan Books</span>
+                        <p class="sponsor-item-context__text">We help physical bookstores manage their overstock to the book inventory.</p>
+                    </div>
+                </div>
+                <div class="sponsored-wrapper__item">
+                    <div class="img-holder">
+                        <img class="sponsored-wrapper__img" src="src/img/megank.svg" alt="megank">
+                    </div>
+                    <div class="sponsor-item-context">
+                        <span class="sponsor-item-context__title">Megank</span>
+                        <p class="sponsor-item-context__text">Bookstore serving up the full spectrum of Black literature and wine black books.</p>
+                    </div>
+                </div>
+                <div class="sponsored-wrapper__item">
+                    <div class="img-holder">
+                        <img class="sponsored-wrapper__img" src="src/img/urban.svg" alt="urban">
+                    </div>
+                    <div class="sponsor-item-context">
+                        <span class="sponsor-item-context__title">Urban Store</span>
+                        <p class="sponsor-item-context__text">We also carry the latest records, issues of all of your favorite comic books.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="get-book-section get-book-section--color">
+        <div class="container get-book-section__container">
+
+            <div class="get-book-section__content">
+                <div class="title">
+                    <h2 class="title__get-book">Get Book Copy Today!</h2>
+                </div>
+                <div class="get-book-section__text">
+                    <p>We believe that bookstores are essential to a healthy culture. They’re where authors can connect with readers.</p>
+                </div>
+                    <div class="btn btn--fix-flex"><a class="btn__link btn__link--blue" href="#">Order Today</a></div>
+            </div>
+
+            <div class="img-holder">
+                <img src="src/img/coffee.png" alt="coffee" class="get-book-section__img">
+            </div>
+        </div>
+    </section>
+
+    <section class="what-will-section">
+        <div class="container what-will-section__container">
+            <div class="title">
+                <h2 class="title__what-will">What Will You Learn?</h2>
+            </div>
+            <div class="what-will-section__content">
+                <div class="card-wrapper card-wrapper--size">
+                    <div class="card-wrapper__item">
+                        <div class="card">
+                            <span class="card__number">01</span>
+                            <div class="card__text">
+                                <p>Use HDFS & Map Reduce for storing & analyzing data at scale.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-wrapper__item">
+                        <div class="card">
+                            <span class="card__number">02</span>
+                            <div class="card__text">
+                                <p>Consume streaming data using Spark Streaming, Flink, and Storm.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-wrapper__item">
+                        <div class="card">
+                            <span class="card__number">03</span>
+                            <div class="card__text">
+                                <p>Choose an appropriate data storage technology for your application</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-wrapper__item">
+                        <div class="card">
+                            <span class="card__number">04</span>
+                            <div class="card__text">
+                                <p>Analyze non-relational data using HBase, Cassandra, and MongoDB.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="what-will-section__img"><img src="src/img/what-will.png" alt="what-will"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="enhance-knowledge-section enhance-knowledge-section--color">
+        <div class="container enhance-knowledge-section__container">
+            <div class="title">
+                <h2 class="title__enhance">Enhance knowledge & Vision</h2>
+            </div>
+            <div class="enhance-knowledge-section__content">
+                <div class="chapter">
+                   <div class="chapter__content">
+                       <span class="chapter__caption">Chapter-1 Get Started Intro</span>
+                       <div class="chapter__text">
+                           <p>You can double your knowledge by reading this ever needed book that can last a lifetime.</p>
+                       </div>
+                       <ul class="info-list">
+                           <li class="info-list__item">Pages:<span>106pages</span></li>
+                           <li class="info-list__item">Length:<span>2 Hours</span></li>
+                       </ul>
+                   </div>
+                </div>
+                <div class="chapter">
+                    <div class="chapter__content">
+                        <span class="chapter__caption">Chapter-2 The Roman Culture</span>
+                    <div class="chapter__text">
+                        <p>It will help to improve your life career with the perfect and needed knowledge about your life.</p>
+                    </div>
+                     <ul class="info-list">
+                    <li class="info-list__item">Pages:<span>180pages</span></li>
+                    <li class="info-list__item">Length:<span>3 Hours</span></li>
+                </ul>
+                    </div>
+                </div>
+                <div class="chapter">
+                    <div class="chapter__content">
+                        <span class="chapter__caption">Chapter-3 How They Servived</span>
+                    <div class="chapter__text">
+                        <p>We wanted to create an easy, convenient way for you to get your books & support.</p>
+                    </div>
+                     <ul class="info-list">
+                    <li class="info-list__item">Pages:<span>250pages</span></li>
+                    <li class="info-list__item">Length:<span>4 Hours</span></li>
+                </ul>
+                    </div>
+                </div>
+                <div class="chapter">
+                    <div class="chapter__content">
+                        <span class="chapter__caption">Chapter-4 The End Of Romans</span>
+                    <div class="chapter__text">
+                        <p>Promote your book via Pages shop to support your writing & reading career.</p>
+                    </div>
+                     <ul class="info-list">
+                    <li class="info-list__item">Pages:<span>175pages</span></li>
+                    <li class="info-list__item">Length:<span>3 Hours</span></li>
+                </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="btn btn--size"><a class="btn__link btn__link--size" href="#">Start a 15-Days Free Trail</a></div>
+            <div class="contact-us">
+                <span class="contact-us__description">Short description about each chapter</span>
+                <div class="contact-us__questions">Have any questions?<span class="contact-us__description">Contact us</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reader-section">
+        <div class="container reader-section__container">
+            <div class="reader-section__content">
+                <div class="title">
+                    <h2 class="title__readers">
+                        Words From Our Readers
+                    </h2>
+                </div>
+                <div class="reader-section__text">
+                    <p>We believe that bookstores are essential to a healthy culture. They’re where authors can connect with readers, where we discover new writers, where children get hooked on the thrill of reading that can last a lifetime.</p>
+                </div>
+                <div class="rating">
+                    <div class="rating__cap">
+                        <ul class="circle-list">
+                            <li class="circle-list__item">
+                                <img src="src/img/circle.svg" alt="circle" class="circle-list__svg">
+                            </li>
+                            <li class="circle-list__item">
+                                <img src="src/img/circle.svg" alt="circle" class="circle-list__svg">
+                            </li>
+                            <li class="circle-list__item">
+                                <img src="src/img/circle.svg" alt="circle" class="circle-list__svg">
+                            </li>
+                            <li class="circle-list__item">
+                                <img src="src/img/circle.svg" alt="circle" class="circle-list__svg">
+                            </li>
+                            <li class="circle-list__item">
+                                <img src="src/img/semi-circle.svg" alt="semi-circle" class="circle-list__svg">
+                            </li>
+                        </ul>
+                        <span class="rating__num">(4.8/5)</span>
+                    </div>
+                    <span class="rating__description">
+                        Overall Customer Ratings
+                    </span>
+                </div>
+            </div>
+            <div class="reader-section__readers">
+                <div class="reader">
+                    <div class="reader__content">
+                        <div class="reader-holder">
+                            <img src="src/img/james.png" alt="james" class="reader__img">
+                            <div class="reader__info">
+                                <span class="reader__name">James Williams</span>
+                                <ul class="circle-list">
+                                    <li class="circle-list__item"> <img src="src/img/circle.svg" alt="circle" class="circle-list__svg"></li>
+                                    <li class="circle-list__item"> <img src="src/img/circle.svg" alt="circle" class="circle-list__svg"></li>
+                                    <li class="circle-list__item"> <img src="src/img/circle.svg" alt="circle" class="circle-list__svg"></li>
+                                    <li class="circle-list__item"> <img src="src/img/circle.svg" alt="circle" class="circle-list__svg"></li>
+                                    <li class="circle-list__item"> <img src="src/img/semi-circle.svg" alt="semi-circle" class="circle-list__svg"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <span class="reader__caption">“ Great Books Collections ”</span>
+                        <div class="reader__text">
+                            <p>I was searching this book for many years and I was happy that I could find it here.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reader">
+                    <div class="reader__content">
+                        <div class="reader-holder">
+                            <img src="src/img/angeline.png" alt="angeline" class="reader__img">
+                            <div class="reader__info">
+                                <span class="reader__name">Angeline Flora</span>
+                                <ul class="circle-list">
+                                    <li class="circle-list__item"> <img src="src/img/circle.svg" alt="circle" class="circle-list__svg"></li>
+                                    <li class="circle-list__item"> <img src="src/img/circle.svg" alt="circle" class="circle-list__svg"></li>
+                                    <li class="circle-list__item"> <img src="src/img/circle.svg" alt="circle" class="circle-list__svg"></li>
+                                    <li class="circle-list__item"> <img src="src/img/circle.svg" alt="circle" class="circle-list__svg"></li>
+                                    <li class="circle-list__item"> <img src="src/img/semi-circle.svg" alt="semi-circle" class="circle-list__svg"></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <span class="reader__caption">“ Creative Writing Skill”</span>
+                        <div class="reader__text">
+                            <p>Sent an email after to books arrived to ask about the author & I received a reply.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reader">
+                    <div class="reader__content">
+                        <div class="reader-holder">
+                            <img src="src/img/chris.png" alt="chris" class="reader__img">
+                            <div class="reader__info">
+                                <span class="reader__name">Chris Adams</span>
+                            <ul class="circle-list">
+                                <li class="circle-list__item"> <img src="src/img/circle.svg" alt="circle" class="circle-list__svg"></li>
+                                <li class="circle-list__item"> <img src="src/img/circle.svg" alt="circle" class="circle-list__svg"></li>
+                                <li class="circle-list__item"> <img src="src/img/circle.svg" alt="circle" class="circle-list__svg"></li>
+                                <li class="circle-list__item"> <img src="src/img/circle.svg" alt="circle" class="circle-list__svg"></li>
+                                <li class="circle-list__item"> <img src="src/img/empty-circle.svg" alt="empty-circle" class="circle-list__svg"></li>
+                            </ul>
+                            </div>
+
+                        </div>
+                        <span class="reader__caption">“ Perfect Response Author”</span>
+                        <div class="reader__text">
+                            <p>I had a question about the book and the author response was great & comfort.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="article-section article-section--color">
+        <div class="container article-section__container">
+            <div class="title">
+                <h2 class="title__article">
+                    Articles & Resources
+                </h2>
+            </div>
+            <div class="article-section__content">
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide"> <div class="article article--size">
+                            <div class="article__img"><img src="src/img/first-article.png" alt="first-article"></div>
+                            <div class="article__content">
+                                <span class="article__caption">Significant reading has more info number</span>
+                                <div class="article__text">
+                                    <p>Override the digital divide with additional clickthroughs from DevOps for real-time schemas.</p>
+                                </div>
+                                <div class="article-footer">
+                        <span class="article-footer__read-more">
+                            Readmore
+                        </span>
+                                    <span class="article-footer__date">October 6, 2021</span>
+                                </div>
+                            </div>
+                        </div></div>
+                        <div class="swiper-slide"><div class="article article--size">
+                            <div class="article__img"><img src="src/img/second-article.png" alt="second-article"></div>
+                            <div class="article__content">
+                                <span class="article__caption">Many variations of pass majority have suffered</span>
+                                <div class="article__text">
+                                    <p>Capitalize on low-hanging fruit to identify a ballpark value-added activity to beta test.</p>
+                                </div>
+                                <div class="article-footer">
+                        <span class="article-footer__read-more">
+                            Readmore
+                        </span>
+                                    <span class="article-footer__date">October 6, 2021</span>
+                                </div>
+                            </div>
+                        </div></div>
+                        <div class="swiper-slide"><div class="article article--size">
+                            <div class="article__img"><img src="src/img/third-section.png" alt="third-second"></div>
+                            <div class="article__content">
+                                <span class="article__caption">Words which don’t look even slightly believable</span>
+                                <div class="article__text">
+                                    <p>Podcasting operational change management inside of workflows to establish a framework.</p>
+                                </div>
+                                <div class="article-footer">
+                        <span class="article-footer__read-more">
+                            Readmore
+                        </span>
+                                    <span class="article-footer__date">October 6, 2021</span>
+                                </div>
+                            </div>
+                        </div></div>
+                    </div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="get-the-best-section">
+        <div class="container get-the-best-section__container">
+            <div class="title">
+                <h2 class="title__get-the-best">Get The Best Updates</h2>
+            </div>
+            <div class="get-the-best-section__text">
+                <p>Subscribe with your mail id to know the current update in book</p>
+                <p>edition at your fingertip with in a minute.</p>
+            </div>
+            <form action="" class="form form--gap">
+                <div class="form__input-holder">
+                    <input type="text" placeholder="Your Email ID..." class="form__input">
+                </div>
+                <button class="form__button">Subscribe</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="footer footer--color">
+    <div class="container footer__container">
+<div class="footer__content">
+    <div class="logo logo--padding">
+        <img class="logo__img logo__img--margin" src="src/img/logo.svg" alt="logo">
+        <div class="icons-menu icons-menu--fix-f">
+            <div class="icon-holder icon-holder--size-f icon-holder--color-f">
+                <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.71875 9L9.15625 6.125H6.375V4.25C6.375 3.4375 6.75 2.6875 8 2.6875H9.28125V0.21875C9.28125 0.21875 8.125 0 7.03125 0C4.75 0 3.25 1.40625 3.25 3.90625V6.125H0.6875V9H3.25V16H6.375V9H8.71875Z" fill="white"/>
+                </svg>
+            </div>
+            <div class="icon-holder icon-holder--size-f icon-holder--color-f">
+                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.3438 3.75C14.9688 3.28125 15.5312 2.71875 15.9688 2.0625C15.4062 2.3125 14.75 2.5 14.0938 2.5625C14.7812 2.15625 15.2812 1.53125 15.5312 0.75C14.9062 1.125 14.1875 1.40625 13.4688 1.5625C12.8438 0.90625 12 0.53125 11.0625 0.53125C9.25 0.53125 7.78125 2 7.78125 3.8125C7.78125 4.0625 7.8125 4.3125 7.875 4.5625C5.15625 4.40625 2.71875 3.09375 1.09375 1.125C0.8125 1.59375 0.65625 2.15625 0.65625 2.78125C0.65625 3.90625 1.21875 4.90625 2.125 5.5C1.59375 5.46875 1.0625 5.34375 0.625 5.09375V5.125C0.625 6.71875 1.75 8.03125 3.25 8.34375C3 8.40625 2.6875 8.46875 2.40625 8.46875C2.1875 8.46875 2 8.4375 1.78125 8.40625C2.1875 9.71875 3.40625 10.6562 4.84375 10.6875C3.71875 11.5625 2.3125 12.0938 0.78125 12.0938C0.5 12.0938 0.25 12.0625 0 12.0312C1.4375 12.9688 3.15625 13.5 5.03125 13.5C11.0625 13.5 14.3438 8.53125 14.3438 4.1875C14.3438 4.03125 14.3438 3.90625 14.3438 3.75Z" fill="white"/>
+                </svg>
+
+            </div>
+            <div class="icon-holder icon-holder--size-f icon-holder--color-f">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.125 14V4.65625H0.21875V14H3.125ZM1.65625 3.40625C2.59375 3.40625 3.34375 2.625 3.34375 1.6875C3.34375 0.78125 2.59375 0.03125 1.65625 0.03125C0.75 0.03125 0 0.78125 0 1.6875C0 2.625 0.75 3.40625 1.65625 3.40625ZM13.9688 14H14V8.875C14 6.375 13.4375 4.4375 10.5 4.4375C9.09375 4.4375 8.15625 5.21875 7.75 5.9375H7.71875V4.65625H4.9375V14H7.84375V9.375C7.84375 8.15625 8.0625 7 9.5625 7C11.0625 7 11.0938 8.375 11.0938 9.46875V14H13.9688Z" fill="white"/>
+                </svg>
+            </div>
+            <div class="icon-holder icon-holder--size-f icon-holder--color-f">
+                <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.5 4.60742C6.125 4.60742 4.23242 6.53711 4.23242 8.875C4.23242 11.25 6.125 13.1426 8.5 13.1426C10.8379 13.1426 12.7676 11.25 12.7676 8.875C12.7676 6.53711 10.8379 4.60742 8.5 4.60742ZM8.5 11.6582C6.97852 11.6582 5.7168 10.4336 5.7168 8.875C5.7168 7.35352 6.94141 6.12891 8.5 6.12891C10.0215 6.12891 11.2461 7.35352 11.2461 8.875C11.2461 10.4336 10.0215 11.6582 8.5 11.6582ZM13.918 4.45898C13.918 3.90234 13.4727 3.45703 12.916 3.45703C12.3594 3.45703 11.9141 3.90234 11.9141 4.45898C11.9141 5.01562 12.3594 5.46094 12.916 5.46094C13.4727 5.46094 13.918 5.01562 13.918 4.45898ZM16.7383 5.46094C16.6641 4.125 16.3672 2.9375 15.4023 1.97266C14.4375 1.00781 13.25 0.710938 11.9141 0.636719C10.541 0.5625 6.42188 0.5625 5.04883 0.636719C3.71289 0.710938 2.5625 1.00781 1.56055 1.97266C0.595703 2.9375 0.298828 4.125 0.224609 5.46094C0.150391 6.83398 0.150391 10.9531 0.224609 12.3262C0.298828 13.6621 0.595703 14.8125 1.56055 15.8145C2.5625 16.7793 3.71289 17.0762 5.04883 17.1504C6.42188 17.2246 10.541 17.2246 11.9141 17.1504C13.25 17.0762 14.4375 16.7793 15.4023 15.8145C16.3672 14.8125 16.6641 13.6621 16.7383 12.3262C16.8125 10.9531 16.8125 6.83398 16.7383 5.46094ZM14.957 13.7734C14.6973 14.5156 14.1035 15.0723 13.3984 15.3691C12.2852 15.8145 9.6875 15.7031 8.5 15.7031C7.27539 15.7031 4.67773 15.8145 3.60156 15.3691C2.85938 15.0723 2.30273 14.5156 2.00586 13.7734C1.56055 12.6973 1.67188 10.0996 1.67188 8.875C1.67188 7.6875 1.56055 5.08984 2.00586 3.97656C2.30273 3.27148 2.85938 2.71484 3.60156 2.41797C4.67773 1.97266 7.27539 2.08398 8.5 2.08398C9.6875 2.08398 12.2852 1.97266 13.3984 2.41797C14.1035 2.67773 14.6602 3.27148 14.957 3.97656C15.4023 5.08984 15.291 7.6875 15.291 8.875C15.291 10.0996 15.4023 12.6973 14.957 13.7734Z" fill="white"/>
+                </svg>
+
+            </div>
+        </div>
+    </div>
+    <div class="footer__list-holder">
+        <div class="footer-title">
+            <h3 class="footer-title__text">Explore</h3>
+        </div>
+        <ul class="footer-list footer-list--padding-first">
+            <li class="footer-list__item">Home</li>
+            <li class="footer-list__item">About</li>
+            <li class="footer-list__item">Articles</li>
+            <li class="footer-list__item">Our Store</li>
+            <li class="footer-list__item">Contact Us</li>
+        </ul>
+    </div>
+    <div class="footer__list-holder">
+        <div class="footer-title">
+            <h3 class="footer-title__text">Utility Pages</h3>
+        </div>
+        <ul class="footer-list footer-list--padding-second">
+            <li class="footer-list__item">Style Guide</li>
+            <li class="footer-list__item">404 Not Found</li>
+            <li class="footer-list__item">Password Protected</li>
+            <li class="footer-list__item">Licenses</li>
+            <li class="footer-list__item">Changelog</li>
+        </ul></div>
+    <div class="footer__list-holder">
+        <div class="footer-title">
+            <h3 class="footer-title__text">Keep in Touch</h3>
+        </div>
+        <ul class="footer-list-of-contacts">
+            <li class="footer-list-of-contacts__item">Address : <span class="footer-list-of-contacts__data">24A Kingston St, Los Vegas</span><span class="footer-list-of-contacts__nc">NC 28202, USA.</span></li>
+            <li class="footer-list-of-contacts__item">Mail : <span class="footer-list-of-contacts__data footer-list-of-contacts__data--pad">support@pages.com</span></li>
+            <li class="footer-list-of-contacts__item">Phone : <span class="footer-list-of-contacts__data">(+22) 123 - 4567 - 900</span></li>
+        </ul></div>
+</div>
+        <div class="footer-down">
+            <p class="footer-down__text">© Drafted by <span class="footer-down__name">VictorFlow</span> - Powered by <span class="footer-down__name">Webflow</span></p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

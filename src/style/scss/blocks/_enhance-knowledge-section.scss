@@ -1,0 +1,209 @@
+.enhance-knowledge-section {
+  &--color {
+    background-color: $light-blue-what-will;
+  }
+
+  &__container {
+    padding: 40px 15px 40px;
+
+    @include respond-to('tablet') {
+      padding: 120px 15px 130px;
+    }
+  }
+
+  // .enhance-knowledge-section__content
+  &__content {
+    justify-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    display: grid;
+    grid-template-columns: 250px;
+    grid-template-rows: auto;
+    row-gap: 40px;
+
+    @include respond-to('mobile') {
+      grid-template-columns: 400px;
+    }
+
+    @include respond-to('tablet') {
+      grid-template-columns: 635px;
+      column-gap: 30px;
+      margin: 0 auto 70px;
+    }
+  }
+
+  @media screen and (min-width: 1300px) {
+    &__content {
+      grid-template-columns: 635px 635px !important;
+    }
+  }
+}
+
+.title {
+  // .title__enhance
+  &__enhance {
+    margin-bottom: 56px;
+    text-align: center;
+
+    @include respond-to('tablet') {
+      margin-bottom: 96px;
+    }
+
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.chapter {
+  // .chapter__content
+  &__content {
+    background-color: $white;
+    padding: 20px;
+
+    @include respond-to('tablet') {
+      padding: 42px 40px 35px;
+    }
+  }
+
+  // .chapter__caption
+  &__caption {
+    display: block;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 26px;
+    color: $blue;
+    margin-bottom: 10px;
+    text-align: center;
+
+    @include respond-to('tablet') {
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 21px;
+      text-align: left;
+    }
+  }
+
+  // .chapter__text
+  &__text {
+    font-family: $inter;
+    font-size: 17px;
+    line-height: 25px;
+    color: $grey;
+    margin-bottom: 10px;
+    text-align: center;
+
+    @include respond-to('tablet') {
+      font-size: 19px;
+      line-height: 32px;
+      text-align: left;
+    }
+  }
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+
+  @include respond-to('tablet') {
+    flex-direction: row;
+    align-items: unset;
+    gap: 45px;
+  }
+
+  // .info-list__item
+  &__item {
+    font-size: 19px;
+    line-height: 25px;
+    color: $blue;
+    position: relative;
+    padding-left: 26px;
+
+    @include respond-to('tablet') {
+      font-size: 22px;
+      line-height: 31px;
+    }
+
+    span {
+      display: inline-block;
+      padding-left: 2px;
+      font-family: $inter;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: $grey;
+
+      @include respond-to('tablet') {
+        padding-left: 10px;
+        font-size: 17px;
+        line-height: 27px;
+      }
+    }
+
+    &::before {
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+      content: '';
+      width: 16px;
+      height: 16px;
+      background-color: $orange;
+      border-radius: 100px;
+      left: 0;
+    }
+  }
+}
+
+.btn {
+  // .btn--size
+  &--size {
+    text-align: center;
+    margin-bottom: 34px;
+  }
+
+  // .btn__link
+  &__link {
+    // .btn__link--size
+    &--size {
+      display: inline-block;
+      padding: 24px 30px;
+
+      @include respond-to('tablet') {
+        padding: 24px 92px 23px;
+      }
+    }
+  }
+}
+
+.contact-us {
+  font-family: $inter;
+  text-align: center;
+  // .contact-us__description
+  &__description {
+    font-size: 16px;
+    line-height: 24px;
+    color: $grey;
+
+    @include respond-to('tablet') {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  // .contact-us__questions
+  &__questions {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.19px;
+    color: $blue;
+
+    @include respond-to('tablet') {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+}

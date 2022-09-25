@@ -1,0 +1,96 @@
+.get-book-section {
+  &--color {
+    background-color: $blue;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 30px;
+    align-items: center;
+    justify-content: center;
+
+    @include respond-to('tablet') {
+      flex-direction: row;
+      padding: 70px 30px;
+      justify-content: space-between;
+    }
+  }
+
+  // .get-book-section__img
+  &__img {
+    max-width: 560px;
+    width: 100%;
+  }
+
+  // .get-book-section__content
+  &__content {
+    max-width: 610px;
+    width: 100%;
+  }
+
+  // .get-book-section__text
+  &__text {
+    font-family: $inter;
+    font-size: 17px;
+    line-height: 24px;
+    color: $light-blue;
+    margin-bottom: 27px;
+    text-align: center;
+
+    @include respond-to('tablet') {
+      font-size: 19px;
+      line-height: 28px;
+      text-align: left;
+    }
+  }
+}
+
+.title {
+  // .title__get-book
+  &__get-book {
+    margin-bottom: 54px;
+    color: $white !important;
+    text-align: center;
+
+    @include respond-to('tablet') {
+      text-align: left;
+    }
+      &::before {
+        left: 50%;
+        transform: translateX(-50%);
+        @include respond-to('tablet') {
+          left: 0;
+          transform: translateX(0);
+        }
+    }
+  }
+}
+
+.btn {
+
+  &--fix-flex {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    @include respond-to('tablet') {
+      display: block;
+      margin-bottom: 0;
+    }
+  }
+  // .btn__link
+  &__link {
+    // .btn__link--blue
+    &--blue {
+      background-color: $blue;
+      letter-spacing: 0.38px;
+      color: $white;
+      display: inline-block;
+
+      &:hover {
+        background-color: $white;
+        color: $blue;
+      }
+    }
+  }
+}

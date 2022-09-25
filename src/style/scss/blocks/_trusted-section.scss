@@ -1,0 +1,71 @@
+.trusted-section {
+  &__container {
+    padding: 40px 15px;
+
+    @include respond-to('laptop') {
+      padding: 110px 15px 130px;
+    }
+  }
+}
+
+.title {
+  // .title__trusted
+  &__trusted {
+    text-align: center;
+    margin-bottom: 76px;
+
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.sponsored-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+
+  @include respond-to('laptop') {
+    justify-content: unset;
+    flex-direction: row;
+  }
+  // .sponsored-wrapper__item
+  &__item {
+    text-align: center;
+  }
+  // .sponsored-wrapper__img
+  &__img {
+    margin: 0 auto 19px;
+  }
+}
+
+.sponsor-item-context {
+  // .sponsor-item-context__title
+  &__title {
+    display: block;
+    font-size: 22px;
+    line-height: 30px;
+    color: $blue;
+    margin-bottom: 16px;
+
+    @include respond-to('laptop') {
+      font-size: 24px;
+      line-height: 34px;
+    }
+  }
+
+  // .sponsor-item-context__text
+  &__text {
+    font-family: $inter;
+    font-size: 17px;
+    line-height: 24px;
+    color: $grey;
+
+    @include respond-to('laptop') {
+      font-size: 19px;
+      line-height: 28px;
+    }
+  }
+}

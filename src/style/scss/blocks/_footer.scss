@@ -1,0 +1,219 @@
+.footer {
+  &--color {
+    background-color: $blue;
+  }
+
+  &__container {
+    padding: 40px 15px;
+
+    @include respond-to('tablet') {
+      padding: 60px 15px 24px;
+    }
+  }
+
+  // .footer__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 46px;
+    justify-content: center;
+
+    @include respond-to('tablet') {
+      flex-direction: row;
+      justify-content: flex-start;
+      margin-bottom: 86px;
+    }
+  }
+}
+
+.icons-menu {
+  // .icons-menu--fix-f
+  &--fix-f {
+    justify-content: unset;
+    @include respond-to('tablet') {
+      justify-content: space-between;
+    }
+  }
+}
+
+.logo {
+
+  &--padding {
+
+    @include respond-to('mobile-s') {
+      padding-right: 88px;
+    }
+  }
+  // .logo__img
+  &__img {
+    &--margin {
+      margin: 0 auto 20px;
+
+      @include respond-to('tablet') {
+        margin: 0 auto 20px 0;
+      }
+    }
+  }
+}
+
+.icon-holder {
+  cursor: pointer;
+  // .icon-holder--size-f
+  &--size-f {
+    width: 55px;
+    height: 55px;
+  }
+
+  // .icon-holder--color-f
+  &--color-f {
+    background-color: $blue;
+    border: 1px solid $orange;
+  }
+}
+
+.footer-title {
+  // .footer-title__text
+  &__text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: 0.384px;
+    color: $white;
+    margin-bottom: 10px;
+    text-align: center;
+
+    @include respond-to('tablet') {
+      text-align: left;
+      margin-bottom: 14px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 10px;
+
+      @include respond-to('tablet') {
+        margin-bottom: 27px;
+      }
+    }
+  }
+}
+
+.footer-list {
+
+  &--padding-first {
+    padding-right: 0;
+
+    @include respond-to('tablet') {
+      padding-right: 100px;
+    }
+  }
+
+  &--padding-second {
+    padding-right: 0;
+
+    @include respond-to('tablet') {
+      padding-right: 93px;
+    }
+  }
+  // .footer-list__item
+  &__item {
+    cursor: pointer;
+    padding-left: 40px;
+    position: relative;
+    font-family: $inter;
+    font-size: 18px;
+    line-height: 31px;
+    letter-spacing: 0.18px;
+    color: $light-blue;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 2px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url("../../img/small-circles.svg");
+      left: 13px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.footer-list-of-contacts {
+  // .footer-list-of-contacts__item
+  &__item {
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.36px;
+    color: $white;
+    text-align: center;
+
+    @include respond-to('tablet') {
+      text-align: left;
+    }
+  }
+  // .footer-list-of-contacts__data
+  &__data {
+    font-family: $inter;
+    font-size: 17px;
+    color: $light-blue;
+    display: inline-block;
+
+    &:first-of-type {
+
+      @include respond-to('tablet') {
+        padding-left: 28px;
+      }
+    }
+
+    &--pad {
+      margin-bottom: 28px;
+      padding: 0 !important;
+      @include respond-to('tablet') {
+        padding-left: 55px !important;
+      }
+    }
+
+    &:last-of-type {
+      padding-left: 0;
+
+      @include respond-to('tablet') {
+        padding-left: 41px;
+      }
+    }
+  }
+
+  // .footer-list-of-contacts__nc
+  &__nc {
+    display: block;
+    padding-left: 0 !important;
+    margin-bottom: 28px;
+    font-family: $inter;
+    font-size: 18px;
+    line-height: 27px;
+    color: $light-blue;
+
+    @include respond-to('tablet') {
+      padding-left: 105px !important;
+    }
+  }
+}
+
+.footer-down {
+  font-family: $inter;
+  font-size: 17px;
+  line-height: 26px;
+  letter-spacing: 0.17px;
+  text-align: center;
+  // .footer-down__text
+  &__text {
+    color: $light-blue;
+  }
+
+  // .footer-down__name
+  &__name {
+    color: $white;
+  }
+}
