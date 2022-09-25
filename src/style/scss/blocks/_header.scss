@@ -24,6 +24,7 @@
   &.active {
     height: 100vh;
     background-color: $blue;
+    overflow-y: hidden;
 
     .nav {
       opacity: 1;

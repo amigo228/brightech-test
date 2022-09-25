@@ -61,6 +61,7 @@ a {
 .header.active {
   height: 100vh;
   background-color: #1B3764;
+  overflow-y: hidden;
 }
 .header.active .nav {
   opacity: 1;
